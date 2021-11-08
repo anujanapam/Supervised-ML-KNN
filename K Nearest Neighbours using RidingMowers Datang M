@@ -1,0 +1,29 @@
+# BUSINESS ANALYTICS APPLICATION: 
+To predict the situation of similar kind of condition, this ML technique is used. If we get CAT exam marks of students of previous year then we can predict 
+that whether a student will be placed in IIMs or not. We only compare with the similar kind of scores.
+When a mobile phone company sets its price of its products, it takes into account the prices of similar phones.
+
+## DATA: The data provides income and lot size of individuals. We want to predict with some certain situation, whether the individual will be owner of mowers or not.
+
+### DESCRIPTION: 
+K-Nearest Neighbours is a very widely and commonly used supervised machine learning technique for Predictive analytics. It is mainly used for predicting 
+a particular category. It also can be used for predicting numerical values.
+In Linear Regression models, we take different values which are not so much specific for a particular category. These are more general models. But, in KNN, 
+we make prediction on the basis of similar kind of data. Hence, this model is much more specific and the prediction accuracy is better. In KNN, we have only the 
+numerical predictors.
+KNN model is data driven, not model driven and it does not make any assumption about the data. For a given record, the model identifies nearby records by measuring 
+distance. The most popular distance measure is Euclidean distance.
+We want to choose how many k’s are needed. K=1 means single nearest record, k=5 means, 5 nearest records. We take that value of k, that has low error rate in validation.
+
+#### RESULTS & DISCUSSION: 
+We add number column to eliminate the confusion of Python numbering. First of all, we divide the data into training and validation. We want to predict whether
+an individual with 60k USD income and lot size 20 will be a owner or non-owner.
+Normalizing is import for nearest neighbours. We are processing the standard scaler for training data. We are incorporating the new household in the data. 
+4,14 and 1 are the nearest members.
+We are training data for k in range 1 to 15 then printing accuracy for the validation data. We would take k=4. The target will be to choose the lowest value 
+of k to preserve the local structure. K=0.9 is the smallest number with highest accuracy.
+We will use k=4 to make the prediction. We use 24 observations. The Euclidean distance is calculated. 4th observation is the closest. Then, the 9th,14th 
+and 1st are the next closest. We can clearly observe, 3 out of 4 are owners. Hence, the KNN technique predicts that, this individual will also be an owner.
+
+##### IMPLICATIONS & RECOMMENDATIONS:
+It is a more precise and targeted way to predict. MLRM does not take only the similar values. Hence, the accuracy is better than the general ones.
